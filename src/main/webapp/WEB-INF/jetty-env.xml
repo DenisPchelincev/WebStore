@@ -19,7 +19,7 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">org.postgresql.Driver</Set>
-                <Set name="url">jdbc:postgresql://192.168.54.83:5432/webstore</Set>
+                <Set name="url">jdbc:postgresql://localhost:5432/webstore</Set>
                 <Set name="username">postgres</Set>
                 <Set name="password">postgres</Set>
             </New>
@@ -31,7 +31,7 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">org.postgresql.Driver</Set>
-                <Set name="url">jdbc:postgresql://192.168.54.83:5432/webstore</Set>
+                <Set name="url">jdbc:postgresql://localhost:5432/webstore</Set>
                 <Set name="username">postgres</Set>
                 <Set name="password">postgres</Set>
             </New>
@@ -43,7 +43,7 @@ IT IS NOT RECOMMENDED TO USE JETTY IN A PRODUCTION ENVIRONMENT.
         <Arg>
             <New class="org.apache.commons.dbcp.BasicDataSource">
                 <Set name="driverClassName">org.postgresql.Driver</Set>
-                <Set name="url">jdbc:postgresql://192.168.54.83:5432/webstore</Set>
+                <Set name="url">jdbc:postgresql://localhost:5432/webstore</Set>
                 <Set name="username">postgres</Set>
                 <Set name="password">postgres</Set>
             </New>
