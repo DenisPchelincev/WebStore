@@ -20,4 +20,6 @@
         
         <!-- Shared properties between admin and core go here -->
         
+        <bean id="InitParseBean" class="com.parser.StartParsing" init-method="init"/>
+        <context:component-scan base-package="com.parser"/>
 </beans>
