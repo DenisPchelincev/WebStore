@@ -13,7 +13,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class Focalprice {
@@ -49,12 +48,13 @@ public class Focalprice {
 
 				System.out.println(category.text() + " : " + category.attr("href") + " : " + ids);
 
-				//Category categoryEntity = categoryService.createCategory();
 				Category categoryEntity = new CategoryImpl();
 				categoryEntity.setName(category.text());
 				categoryEntity.setId(Long.valueOf("10" + ids));
 				categoryEntity.setDefaultParentCategory(root);
+				categoryEntity.getAllParentCategories().add(root);
 				categoryEntity.setActiveStartDate(new Date());
+				categoryEntity.setUrl("/ca-"+ids);
 				categoryService.saveCategory(categoryEntity);
 				
 				for (Element subCat : litem.select("li.sub_category_self")) {
